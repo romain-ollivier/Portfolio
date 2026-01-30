@@ -35,5 +35,17 @@ def home():
     texts = load_translations(lang)
     return render_template("home.html", texts=texts, lang=lang)
 
+@app.route("/skills/data")
+def skills_data():
+    return render_template("skills/data.html")
+
+@app.route("/skills/pm")
+def skills_pm():
+    return render_template("skills/pm.html")
+
+@app.route("/skills/automation")
+def skills_automation():
+    return render_template("skills/automation.html")
+
 if __name__ == "__main__":
     app.run(debug=True)

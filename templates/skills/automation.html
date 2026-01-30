@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block title %}Skills - Automation{% endblock %}
+
+{% block content %}
+<script>
+let currentLang = localStorage.getItem('lang') || 'fr';
+loadTranslations(currentLang);
+
+function switchLang(lang) {
+    localStorage.setItem('lang', lang);
+    loadTranslations(lang);
+}
+
+function loadTranslations(lang) {
+    fetch(`/translations/${lang}.json`)
+        .then(response => response.json())
+        .then(data => {
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (data[key]) el.textContent = data[key];
+            });
+        })
+        .catch(err => console.error('Erreur traduction:', err));
+}
+</script>
+
+<header class="flex justify-between items-center px-6 py-4 bg-white shadow-md">
+    <h1 class="text-2xl font-bold text-black">Romain Ollivier</h1>
+    <div class="flex items-center space-x-2">
+        <button class="p-2 rounded hover:bg-gray-200 transition" onclick="switchLang('fr')">FR
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/1280px-Flag_of_France.svg.png" alt="FR" class="w-6 h-6">
+        </button>
+        <button class="p-2 rounded hover:bg-gray-200 transition" onclick="switchLang('en')">EN
+            <img src="https://stock.wikimini.org/w/images/9/97/Drapeau-Royaume-Uni.png" alt="EN" class="w-6 h-6">
+        </button>
+    </div>
+</header>
+
+<section class="min-h-screen bg-white flex flex-col items-center justify-center text-center px-6">
+    <h2 data-i18n="AutoTitle" class="text-3xl font-bold mb-4">Automation & Development</h2>
+    <p data-i18n="AutoDesc" class="max-w-3xl text-gray-800 text-lg mb-8">
+        Solutions d'automatisation et développement robustes.
+    </p>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-4xl w-full">
+        <div class="bg-yellow-700 text-white p-6 rounded-lg shadow-md text-center">
+            <h3 data-i18n="AutoSkill1Title" class="font-bold text-lg mb-2">Python & RPA</h3>
+            <p data-i18n="AutoSkill1Desc" class="text-sm">Automatisation de processus métier.</p>
+        </div>
+        <div class="bg-yellow-700 text-white p-6 rounded-lg shadow-md text-center">
+            <h3 data-i18n="AutoSkill2Title" class="font-bold text-lg mb-2">Docker & Kubernetes</h3>
+            <p data-i18n="AutoSkill2Desc" class="text-sm">Containerisation et orchestration.</p>
+        </div>
+        <div class="bg-yellow-700 text-white p-6 rounded-lg shadow-md text-center">
+            <h3 data-i18n="AutoSkill3Title" class="font-bold text-lg mb-2">VBA & Excel</h3>
+            <p data-i18n="AutoSkill3Desc" class="text-sm">Macros avancées et automatisation Office.</p>
+        </div>
+    </div>
+</section>
+
+<div class="w-full text-center pb-10">
+    <a href="/" data-i18n="BackHome" class="text-blue-600 hover:underline">Revenir à l'accueil</a>
+</div>
+{% endblock %}

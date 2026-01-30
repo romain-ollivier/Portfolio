@@ -1,0 +1,157 @@
+{% extends "base.html" %}
+
+{% block title %}Skills - Data{% endblock %}
+
+{% block content %}
+
+<script>
+let currentLang = localStorage.getItem('lang') || 'fr';
+loadTranslations(currentLang);
+
+function switchLang(lang) {
+    localStorage.setItem('lang', lang);
+    loadTranslations(lang);
+}
+
+function loadTranslations(lang) {
+    fetch(`/translations/${lang}.json`)
+        .then(response => response.json())
+        .then(data => {
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (data[key]) el.textContent = data[key];
+            });
+        });
+}
+</script>
+
+<!-- Header -->
+<header class="flex justify-between items-center px-6 py-4 bg-white shadow-md">
+    <h1 class="text-2xl font-bold text-black">Romain Ollivier</h1>
+    <div class="flex items-center space-x-2">
+        <button onclick="switchLang('fr')" class="p-2 hover:bg-gray-200 rounded">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Flag_of_France.svg" class="w-6 h-6">
+        </button>
+        <button onclick="switchLang('en')" class="p-2 hover:bg-gray-200 rounded">
+            <img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg" class="w-6 h-6">
+        </button>
+    </div>
+</header>
+
+<!-- PAGE CONTAINER -->
+<section class="bg-white px-6 py-16 flex flex-col items-center">
+
+    <!-- TITLE -->
+    <h2 data-i18n="DataTitle" class="text-4xl font-bold mb-6 text-center">
+        Data Management & Visualisation
+    </h2>
+
+    <!-- VISION -->
+    <div class="max-w-4xl bg-gray-100 p-6 rounded-lg mb-16">
+        <p data-i18n="DataVision" class="text-gray-800 text-lg text-center">
+            I design data solutions that transform raw data into actionable insights,
+            supporting decision-making, performance monitoring, and operational efficiency.
+        </p>
+    </div>
+
+    <!-- SKILLS BY PURPOSE -->
+    <div class="max-w-5xl grid grid-cols-1 md:grid-cols-3 gap-8 mb-20 w-full">
+
+        <!-- Data Collection -->
+        <div class="bg-yellow-600 text-white p-6 rounded-lg shadow-md">
+            <h3 data-i18n="DataBlock1Title" class="font-bold text-xl mb-4">
+                Data Collection & Management
+            </h3>
+            <ul class="list-disc list-inside text-sm space-y-1">
+                <li data-i18n="DataBlock1Item1">APIs, SQL, NoSQL</li>
+                <li data-i18n="DataBlock1Item2">ERP & Salesforce integration</li>
+                <li data-i18n="DataBlock1Item3">Data quality & governance</li>
+            </ul>
+        </div>
+
+        <!-- Data Analysis -->
+        <div class="bg-black text-white p-6 rounded-lg shadow-md">
+            <h3 data-i18n="DataBlock2Title" class="font-bold text-xl mb-4">
+                Analysis & Transformation
+            </h3>
+            <ul class="list-disc list-inside text-sm space-y-1">
+                <li data-i18n="DataBlock2Item1">Python (Pandas, NumPy)</li>
+                <li data-i18n="DataBlock2Item2">Business rules implementation</li>
+                <li data-i18n="DataBlock2Item3">Automation & optimization</li>
+            </ul>
+        </div>
+
+        <!-- Data Visualization -->
+        <div class="bg-yellow-600 text-white p-6 rounded-lg shadow-md">
+            <h3 data-i18n="DataBlock3Title" class="font-bold text-xl mb-4">
+                Visualisation & Reporting
+            </h3>
+            <ul class="list-disc list-inside text-sm space-y-1">
+                <li data-i18n="DataBlock3Item1">Power BI & Tableau dashboards</li>
+                <li data-i18n="DataBlock3Item2">KPI monitoring</li>
+                <li data-i18n="DataBlock3Item3">Executive presentations</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- USE CASES -->
+    <div class="max-w-5xl w-full mb-20">
+        <h3 data-i18n="DataUseCasesTitle" class="text-3xl font-bold mb-8 text-center">
+            Selected Data Projects
+        </h3>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+            <div class="border border-black p-6 rounded-lg">
+                <h4 data-i18n="DataUseCase1Title" class="font-bold mb-2">Commercial KPI Dashboard</h4>
+                <p data-i18n="DataUseCase1Desc" class="text-sm text-gray-700">
+                    Power BI dashboard connected to Salesforce to monitor commercial performance
+                    and support strategic decision-making.
+                </p>
+            </div>
+
+            <div class="border border-black p-6 rounded-lg">
+                <h4 data-i18n="DataUseCase2Title" class="font-bold mb-2">Operational Automation Reporting</h4>
+                <p data-i18n="DataUseCase2Desc" class="text-sm text-gray-700">
+                    Identification and automation of recurring IT tasks through reporting tools,
+                    improving operational efficiency.
+                </p>
+            </div>
+
+            <div class="border border-black p-6 rounded-lg">
+                <h4 data-i18n="DataUseCase3Title" class="font-bold mb-2">IT Infrastructure Cost Analysis</h4>
+                <p data-i18n="DataUseCase3Desc" class="text-sm text-gray-700">
+                    Python API and Power BI solution to analyze and visualize IT infrastructure
+                    costs for financial steering.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- STACK -->
+    <div class="max-w-4xl text-center mb-16">
+        <h3 data-i18n="DataStackTitle" class="text-2xl font-bold mb-6">
+            Tools & Technologies
+        </h3>
+        <div class="flex flex-wrap justify-center gap-3">
+            <span class="px-4 py-2 bg-gray-200 rounded-full text-sm">Python</span>
+            <span class="px-4 py-2 bg-gray-200 rounded-full text-sm">SQL</span>
+            <span class="px-4 py-2 bg-gray-200 rounded-full text-sm">Power BI</span>
+            <span class="px-4 py-2 bg-gray-200 rounded-full text-sm">Tableau</span>
+            <span class="px-4 py-2 bg-gray-200 rounded-full text-sm">Alteryx</span>
+            <span class="px-4 py-2 bg-gray-200 rounded-full text-sm">APIs</span>
+            <span class="px-4 py-2 bg-gray-200 rounded-full text-sm">VBA</span>
+            <span class="px-4 py-2 bg-gray-200 rounded-full text-sm">Excel</span>
+        </div>
+    </div>
+
+    <!-- BACK HOME -->
+    <a href="/" data-i18n="BackHome" class="text-blue-600 hover:underline">
+        Back to home
+    </a>
+
+</section>
+
+{% endblock %}
