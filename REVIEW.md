@@ -1,6 +1,6 @@
 # Code Review / Revue de Code
 
-## 📊 Résumé Exécutif / Executive Summary
+## 📊 Résumé exécutif / Executive Summary
 
 **Date de la revue**: 30 janvier 2026  
 **Statut**: ❌ Aucun code à réviser  
@@ -190,7 +190,7 @@ R:
 
 ---
 
-## 📞 Prochaines Étapes / Next Steps
+## 📞 Prochaines étapes / Next Steps
 
 1. **Immédiat**: Décidez de votre stack technologique
 2. **Aujourd'hui**: Créez la structure de base du projet

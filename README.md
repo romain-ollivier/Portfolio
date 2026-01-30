@@ -27,9 +27,16 @@ Portfolio/
 ```
 
 #### Option 2: Portfolio avec Framework (React, Vue, etc.)
-- **React**: `npx create-react-app portfolio`
-- **Vue**: `npm create vue@latest`
-- **Next.js**: `npx create-next-app portfolio`
+```bash
+# React
+npx create-react-app portfolio
+
+# Vue
+npm create vue@latest portfolio
+
+# Next.js
+npx create-next-app portfolio
+```
 
 #### Option 3: Portfolio Static Site Generator
 - **Gatsby**: Pour un site optimisé SEO
