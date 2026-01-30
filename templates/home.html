@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+
+{% block title %}Accueil{% endblock %}
+
+
+{% block content %}
+
+
+<!-- Header avec sélecteur de langue -->
+<header class="flex justify-between items-center px-6 py-4 bg-white shadow-md">
+<h1 class="text-2xl font-bold text-black">Romain Ollivier</h1>
+<!-- Language selector -->
+<div class="flex items-center space-x-2">
+<button class="p-2 rounded hover:bg-gray-200 transition">
+<img src="{{ url_for('static', filename='images/fr.png') }}" alt="FR" class="w-6 h-6">
+</button>
+<button class="p-2 rounded hover:bg-gray-200 transition">
+<img src="{{ url_for('static', filename='images/uk.png') }}" alt="EN" class="w-6 h-6">
+</button>
+</div>
+</header>
+
+
+<!-- Hero / Présentation -->
+<section class="min-h-screen bg-white flex flex-col items-center justify-center text-center px-6">
+<img src="{{ url_for('static', filename='images/photo.jpg') }}" alt="Photo Romain Ollivier"
+class="w-40 h-40 rounded-full object-cover mb-6 shadow-lg">
+<p class="max-w-5xl text-gray-800 text-lg md:text-xl leading-relaxed mb-12">
+      Fort de ma rapidité de compréhension et de mon esprit analytique, j'ai obtenu mon expertise dans le domaine de la donnée, notamment en confectionnant des rapports et présentations mettant en valeur les KPI intéressantes répondant aux besoins de mes clients. Dynamique, doté d'un excellent relationnel, rigoureux et réfléchi, je m'adapte aux différents environnements qui m'entourent, et cerne rapidement ce qui est attendu de ma part.
+</p>
+<!-- Skills section -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-4xl w-full">
+<!-- Skill Card -->
+<a href="/skills/data" class="bg-yellow-700 text-white p-6 rounded-lg shadow-md hover:shadow-xl transition text-center">
+<h3 class="font-bold text-lg mb-2">Data Management / Visualisation</h3>
+<p class="text-sm">SQL, NoSQL, Python, PowerBI, Tableau</p>
+</a>
+<a href="/skills/pm" class="bg-black text-white p-6 rounded-lg shadow-md hover:shadow-xl transition text-center">
+<h3 class="font-bold text-lg mb-2">Gestion de projet</h3>
+<p class="text-sm">Agile, V-Model, coordination, reporting</p>
+</a>
+<a href="/skills/automation" class="bg-yellow-700 text-white p-6 rounded-lg shadow-md hover:shadow-xl transition text-center">
+<h3 class="font-bold text-lg mb-2">Automatisation / Développement</h3>
+<p class="text-sm">Python, RPA, VBA, Docker, Kubernetes</p>
+</a>
+</div>
+</section>
+
+
+{% endblock %}

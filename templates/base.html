@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>{% block title %}Portfolio{% endblock %}</title>
+
+
+<!-- Tailwind CSS via CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+
+<!-- CSS perso -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="bg-white">
+{% block content %}{% endblock %}
+</body>
+</html>
