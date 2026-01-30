@@ -1,9 +1,9 @@
 {
-  "intro": "Fort de ma rapidité de compréhension et de mon esprit analytique, j'ai obtenu mon expertise dans le domaine de la donnée, notamment en confectionnant des rapports et présentations mettant en valeur les KPI intéressantes répondant aux besoins de mes clients. Dynamique, doté d'un excellent relationnel, rigoureux et réfléchi, je m'adapte aux différents environnements qui m'entourent, et cerne rapidement ce qui est attendu de ma part.",
-  "data": "Data Management / Visualisation",
-  "data2": "SQL, NoSQL, Python, PowerBI, Tableau",
-  "projet": "Gestion de projet",
-  "projet2": "Agile, V-Model, coordination, reporting",
-  "automatisation": "Automatisation / Développement",
-  "automatisation2": "Python, RPA, VBA, Docker, Kubernetes"
+  "Intro": "Fort de ma rapidité de compréhension et de mon esprit analytique, j'ai obtenu mon expertise dans le domaine de la donnée, notamment en confectionnant des rapports et présentations mettant en valeur les KPI intéressantes répondant aux besoins de mes clients. Dynamique, doté d'un excellent relationnel, rigoureux et réfléchi, je m'adapte aux différents environnements qui m'entourent, et cerne rapidement ce qui est attendu de ma part.",
+  "Data": "Data Management / Visualisation",
+  "Data2": "SQL, NoSQL, Python, PowerBI, Tableau",
+  "Projet": "Gestion de projet",
+  "Projet2": "Agile, V-Model, coordination, reporting",
+  "Automatisation": "Automatisation / Développement",
+  "Automatisation2": "Python, RPA, VBA, Docker, Kubernetes"
 }

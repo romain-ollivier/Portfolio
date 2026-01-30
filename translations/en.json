@@ -1,9 +1,9 @@
 {
-  "intro": "Building on my strong learning ability and analytical mindset, I have developed expertise in the data field, particularly by designing reports and presentations that highlight relevant KPIs aligned with my clients’ needs. Dynamic, with excellent interpersonal skills, rigorous and thoughtful, I adapt easily to different environments and quickly understand what is expected of me.",
-  "data": "Data Management / Visualization",
-  "data2": "SQL, NoSQL, Python, Power BI, Tableau",
-  "projet": "Project Management",
-  "projet2": "Agile, V-Model, coordination, reporting",
-  "automatisation": "Automation / Development",
-  "automatisation2": "Python, RPA, VBA, Docker, Kubernetes"
+  "Intro": "With my quick understanding and analytical mind, I have gained expertise in data management, particularly by designing reports and presentations that highlight relevant KPIs aligned with my clients’ needs. Dynamic, with excellent interpersonal skills, rigorous and thoughtful, I adapt easily to different environments and quickly understand what is expected of me.",
+  "Data": "Data Management / Visualization",
+  "Data2": "SQL, NoSQL, Python, PowerBI, Tableau",
+  "Projet": "Project Management",
+  "Projet2": "Agile, V-Model, coordination, reporting",
+  "Automatisation": "Automation / Development",
+  "Automatisation2": "Python, RPA, VBA, Docker, Kubernetes"
 }
