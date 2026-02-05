@@ -44,11 +44,11 @@
   "DataBlock3Item2": "Organization of structured visuals to make data clear and targeted",
   "DataBlock3Item3": "Intuitive navigation and ease of dashboard interpretation",
   "DataUseCasesTitle": "Selected Projects",
-  "DataUseCase1Title": "Commercial KPI Dashboard",
+  "DataUseCase1Title": "Lendys (Internal Project):\n Commercial KPI Dashboard",
   "DataUseCase1Desc": "Development of a Power BI dashboard connected via the Salesforce API for tracking key commercial performance indicators.",
-  "DataUseCase2Title": "Dataflow Automation between Internal Tool and Procurement Software",
+  "DataUseCase2Title": "Acxias (Mission for Pierre Fabre):\n Dataflow Automation between Internal Tool and Procurement Software",
   "DataUseCase2Desc": "Python RPA Selenium script to automate the import of correspondence tables into SAP Ariba",
-  "DataUseCase3Title": "IT Project Budget Analysis within the Compliance Department",
+  "DataUseCase3Title": "Thémis Conseil (Mission for BNP Paribas):\n IT Project Budget Analysis within the Compliance Department",
   "DataUseCase3Desc": "Design of visualizations on Tableau for the production of financial analyses for management.",
   "DataStackTitle": "Tools & Technologies"
 }

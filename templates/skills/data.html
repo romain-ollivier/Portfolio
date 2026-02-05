@@ -29,11 +29,11 @@ function loadTranslations(lang) {
 <header class="flex justify-between items-center px-6 py-4 bg-white shadow-md">
     <h1 class="text-2xl font-bold text-black">Romain Ollivier</h1>
     <div class="flex items-center space-x-2">
-        <button onclick="switchLang('fr')" class="p-2 hover:bg-gray-200 rounded">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Flag_of_France.svg" class="w-6 h-6">
+        <button class="p-2 rounded hover:bg-gray-200 transition" onclick="switchLang('fr')">FR
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/1280px-Flag_of_France.svg.png" alt="FR" class="w-6 h-6">
         </button>
-        <button onclick="switchLang('en')" class="p-2 hover:bg-gray-200 rounded">
-            <img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg" class="w-6 h-6">
+        <button class="p-2 rounded hover:bg-gray-200 transition" onclick="switchLang('en')">EN
+            <img src="https://stock.wikimini.org/w/images/9/97/Drapeau-Royaume-Uni.png" alt="EN" class="w-6 h-6">
         </button>
     </div>
 </header>
@@ -105,7 +105,7 @@ function loadTranslations(lang) {
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 
             <div class="border border-black p-6 rounded-lg">
-                <h4 data-i18n="DataUseCase1Title" class="font-bold mb-2">Dashboard KPIs commerciaux</h4>
+                <h4 data-i18n="DataUseCase1Title" class="font-bold mb-2">Lendys (Projet interne) :Dashboard KPIs commerciaux</h4>
                 <p data-i18n="DataUseCase1Desc" class="text-sm text-gray-700">
                     Développement d'un tableau de bord sous Power BI connecté via l'API Salesforce
                     pour le suivi des indicateurs clés de performance commerciaux.
@@ -113,14 +113,14 @@ function loadTranslations(lang) {
             </div>
 
             <div class="border border-black p-6 rounded-lg">
-                <h4 data-i18n="DataUseCase2Title" class="font-bold mb-2">Automatisation de dataflow entre outil interne et logiciel d'achat</h4>
+                <h4 data-i18n="DataUseCase2Title" class="font-bold mb-2">Acxias (Mission pour Pierre Fabre) : Automatisation de dataflow entre outil interne et logiciel d'achat</h4>
                 <p data-i18n="DataUseCase2Desc" class="text-sm text-gray-700">
                     Script RPA python Selenium pour automatiser l'importation des tables de correspondances dans SAP Ariba
                 </p>
             </div>
 
             <div class="border border-black p-6 rounded-lg">
-                <h4 data-i18n="DataUseCase3Title" class="font-bold mb-2">Analyse budgétaire des projets IT au sein du département de la Compliance</h4>
+                <h4 data-i18n="DataUseCase3Title" class="font-bold mb-2"> Thémis Conseil (Mission pour BNP Paribas) : Analyse budgétaire des projets IT au sein du département de la Compliance</h4>
                 <p data-i18n="DataUseCase3Desc" class="text-sm text-gray-700">
                    Conception de visualisations sur Tableau pour la production d’analyses financières destinées au management.
                 </p>
