@@ -1,5 +1,6 @@
 {
-  "Intro": "With my quick understanding and analytical mind, I have gained expertise in data management, particularly by designing reports and presentations that highlight relevant KPIs aligned with my clients’ needs. Dynamic, with excellent interpersonal skills, rigorous and thoughtful, I adapt easily to different environments and quickly understand what is expected of me.",
+  "Intro": "Hello!\n\nI am a Digital Engineer graduate of ISEP, and I built my career around three fields that I am passionate about: data analysis and automation, IT project management, and information systems architecture.\n\nMy experiences, particularly in banking production environments, have enabled me to develop both a technical and functional approach, by understanding business needs while keeping a practical view of systems and their constraints.\n\nI particularly enjoy analyzing a problem, understanding how the different components of an IS interact, and then building simple and effective solutions to improve processes.\n\nToday, I want to continue evolving on projects that combine technology, data, information systems, and business challenges, ideally in an international environment.",
+  "ProfileTitle": "IT / Digital Transformation / Finance / Data",
   "Data": "Data Management / Visualization",
   "Data2": "SQL, NoSQL, Python, PowerBI, Tableau",
   "Projet": "Project Management",
@@ -50,5 +51,14 @@
   "DataUseCase2Desc": "Python RPA Selenium script to automate the import of correspondence tables into SAP Ariba",
   "DataUseCase3Title": "Thémis Conseil (Mission for BNP Paribas):\n IT Project Budget Analysis within the Compliance Department",
   "DataUseCase3Desc": "Design of visualizations on Tableau for the production of financial analyses for management.",
-  "DataStackTitle": "Tools & Technologies"
+  "DataStackTitle": "Tools & Technologies",
+  "CAC40Title": "CAC 40 - one-month performance",
+  "CAC40Description": "This chart uses the Yahoo Finance API to retrieve the CAC 40 index and show its performance over the last month.",
+  "CAC40XAxis": "Date (dd/mm)",
+  "CAC40YAxis": "CAC 40 index points",
+  "CAC40Dataset": "CAC 40",
+  "CAC40Tooltip": "CAC 40 (points)",
+  "CAC40Loading": "Loading data...",
+  "FooterText": "This website was entirely coded in Python. The source code is available at the following link:",
+  "FooterLink": "http://fakelien.com"
 }

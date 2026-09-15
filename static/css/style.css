@@ -1,0 +1,70 @@
+html, body {
+    min-height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-image: url('https://4kwallpapers.com/images/wallpapers/orange-abstract-3440x1440-25336.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: transparent;
+    color: #111827;
+}
+
+body::before {
+    display: none;
+}
+
+header,
+section,
+main,
+.card {
+    position: relative;
+    z-index: 1;
+}
+
+section,
+header,
+main {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.bg-white {
+    background-color: rgba(255, 255, 255, 0.06) !important;
+    backdrop-filter: blur(1px);
+}
+
+.content-shell {
+    background: rgba(255, 255, 255, 0.06);
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.04);
+    backdrop-filter: blur(2px);
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    body {
+        background-attachment: scroll;
+        background-position: center top;
+    }
+
+    .bg-white {
+        background-color: rgba(255, 255, 255, 0.08) !important;
+    }
+
+    section,
+    header,
+    main {
+        background: transparent !important;
+    }
+}

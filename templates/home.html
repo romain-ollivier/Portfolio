@@ -32,48 +32,72 @@ function loadTranslations(lang) {
 
 
 <!-- Header avec sélecteur de langue -->
-<header class="flex justify-between items-center px-6 py-4 bg-white shadow-md">
-<h1 class="text-2xl font-bold text-black">Romain Ollivier</h1>
+<div class="mx-auto max-w-6xl px-3 pt-3">
+    <div class="content-shell overflow-hidden">
+        <header class="flex justify-between items-center px-6 py-4 shadow-md rounded-t-xl bg-transparent">
+            <h1 class="text-2xl font-bold text-black">Romain Ollivier</h1>
 
-<!-- Language selector -->
-<div class="flex items-center space-x-2">
-<button class="p-2 rounded hover:bg-gray-200 transition" onclick="switchLang('fr')">FR
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/1280px-Flag_of_France.svg.png" alt="FR" class="w-6 h-6">
-</button>
+            <!-- Language selector -->
+            <div class="flex items-center space-x-2">
+                <button class="p-2 rounded hover:bg-gray-200 transition" onclick="switchLang('fr')">FR
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/1280px-Flag_of_France.svg.png" alt="FR" class="w-6 h-6">
+                </button>
 
-<button class="p-2 rounded hover:bg-gray-200 transition" onclick="switchLang('en')">EN
-<img src="https://stock.wikimini.org/w/images/9/97/Drapeau-Royaume-Uni.png" alt="EN" class="w-6 h-6">
-</button>
+                <button class="p-2 rounded hover:bg-gray-200 transition" onclick="switchLang('en')">EN
+                    <img src="https://stock.wikimini.org/w/images/9/97/Drapeau-Royaume-Uni.png" alt="EN" class="w-6 h-6">
+                </button>
+            </div>
+        </header>
+
+
+        <!-- Hero / Présentation -->
+        <section class="min-h-screen flex flex-col items-center justify-center text-center px-6 rounded-b-xl bg-transparent">
+            <img src="https://media.licdn.com/dms/image/v2/D4D03AQGwoVVoE9nNDg/profile-displayphoto-crop_800_800/B4DZ2pDJ.4KEAI-/0/1776657679787?e=1790812800&v=beta&t=QrzULUnh4haOgBdxS0qNfmIV4QUGOKsEcjHWT9pkE4Q" alt="Photo Romain Ollivier"
+            class="w-60 h-60 rounded-full object-cover mb-4 shadow-lg border-4 border-white/80 bg-white/50">
+            <p data-i18n="ProfileTitle" class="text-base md:text-lg font-semibold text-gray-800 tracking-wide uppercase mb-8">
+                IT / Digital Transformation / Finance / Data
+            </p>
+            <p data-i18n="Intro" class="max-w-5xl text-gray-800 text-lg md:text-xl leading-relaxed mb-12 text-left whitespace-pre-line">
+Bonjour !
+
+Ingénieur Digital diplômé de l’ISEP, j’ai construit mon parcours autour de trois domaines qui me passionnent : l’analyse de données et l’automatisation, la gestion de projets informatiques et l’architecture des systèmes d’information.
+
+Mes expériences, notamment dans des environnements bancaires de production, m’ont permis de développer une approche à la fois technique et fonctionnelle, en comprenant les besoins métiers tout en gardant une vision concrète des systèmes et de leurs contraintes.
+
+J’aime particulièrement analyser un problème, comprendre comment les différents composants d’un SI interagissent, puis construire des solutions simples et efficaces pour améliorer les processus.
+
+Aujourd’hui, je souhaite continuer à évoluer sur des projets mêlant technologie, data, systèmes d’information et enjeux métiers, idéalement dans un environnement international.
+            </p>
+
+            <!-- Skills section -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-4xl w-full">
+
+                <!-- Skill Card -->
+                <a href="/skills/data" class="bg-yellow-700 text-white p-6 rounded-lg shadow-md hover:shadow-xl transition text-center">
+                    <h3 data-i18n="Data" class="font-bold text-lg mb-2">Data Management / Visualisation</h3>
+                    <p data-i18n="Data2" class="text-sm">SQL, NoSQL, Python, PowerBI, Tableau</p>
+                </a>
+                <a href="/skills/pm" class="bg-black text-white p-6 rounded-lg shadow-md hover:shadow-xl transition text-center">
+                    <h3 data-i18n="Projet" class="font-bold text-lg mb-2">Gestion de projet</h3>
+                    <p data-i18n="Projet2" class="text-sm">Agile, V-Model, coordination, reporting</p>
+                </a>
+                <a href="/skills/automation" class="bg-yellow-700 text-white p-6 rounded-lg shadow-md hover:shadow-xl transition text-center">
+                    <h3 data-i18n="Automatisation" class="font-bold text-lg mb-2">Automatisation / Développement</h3>
+                    <p data-i18n="Automatisation2" class="text-sm">Python, RPA, VBA, Docker, Kubernetes</p>
+                </a>
+            </div>
+        </section>
+
+        <footer class="w-full px-6 pb-14 pt-2 text-center">
+            <p class="text-sm text-gray-700 opacity-90">
+                <span data-i18n="FooterText">Ce site a été entièrement codé en Python. Le code source est disponible au lien suivant :</span>
+                <a data-i18n="FooterLink" href="http://fakelien.com" target="_blank" rel="noopener noreferrer" class="text-gray-800 underline hover:text-gray-900">
+                    http://fakelien.com
+                </a>
+            </p>
+        </footer>
+        </div>
+    </div>
 </div>
-</header>
-
-
-<!-- Hero / Présentation -->
-<section class="min-h-screen bg-white flex flex-col items-center justify-center text-center px-6">
-<img src="{{ url_for('static', filename='images/photo.jpg') }}" alt="Photo Romain Ollivier"
-class="w-40 h-40 rounded-full object-cover mb-6 shadow-lg">
-<p data-i18n="Intro" class="max-w-5xl text-gray-800 text-lg md:text-xl leading-relaxed mb-12">
-      Fort de ma rapidité de compréhension et de mon esprit analytique, j'ai obtenu mon expertise dans le domaine de la donnée, notamment en confectionnant des rapports et présentations mettant en valeur les KPI intéressantes répondant aux besoins de mes clients. Dynamique, doté d'un excellent relationnel, rigoureux et réfléchi, je m'adapte aux différents environnements qui m'entourent, et cerne rapidement ce qui est attendu de ma part.
-</p>
-
-<!-- Skills section -->
-<div class="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-4xl w-full">
-    
-<!-- Skill Card -->
-<a href="/skills/data" class="bg-yellow-700 text-white p-6 rounded-lg shadow-md hover:shadow-xl transition text-center">
-<h3 data-i18n="Data" class="font-bold text-lg mb-2">Data Management / Visualisation</h3>
-<p data-i18n="Data2" class="text-sm">SQL, NoSQL, Python, PowerBI, Tableau</p>
-</a>
-<a href="/skills/pm" class="bg-black text-white p-6 rounded-lg shadow-md hover:shadow-xl transition text-center">
-<h3 data-i18n="Projet" class="font-bold text-lg mb-2">Gestion de projet</h3>
-<p data-i18n="Projet2" class="text-sm">Agile, V-Model, coordination, reporting</p>
-</a>
-<a href="/skills/automation" class="bg-yellow-700 text-white p-6 rounded-lg shadow-md hover:shadow-xl transition text-center">
-<h3 data-i18n="Automatisation" class="font-bold text-lg mb-2">Automatisation / Développement</h3>
-<p data-i18n="Automatisation2" class="text-sm">Python, RPA, VBA, Docker, Kubernetes</p>
-</a>
-</div>
-</section>
-
 
 {% endblock %}

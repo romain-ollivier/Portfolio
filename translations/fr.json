@@ -1,5 +1,6 @@
 {
-  "Intro": "Fort de ma rapidité de compréhension et de mon esprit analytique, j'ai obtenu mon expertise dans le domaine de la donnée, notamment en confectionnant des rapports et présentations mettant en valeur les KPI intéressantes répondant aux besoins de mes clients. Dynamique, doté d'un excellent relationnel, rigoureux et réfléchi, je m'adapte aux différents environnements qui m'entourent, et cerne rapidement ce qui est attendu de ma part.",
+  "Intro": "Bonjour !\n\nIngénieur Digital diplômé de l’ISEP, j’ai construit mon parcours autour de trois domaines qui me passionnent : l’analyse de données et l’automatisation, la gestion de projets informatiques et l’architecture des systèmes d’information.\n\nMes expériences, notamment dans des environnements bancaires de production, m’ont permis de développer une approche à la fois technique et fonctionnelle, en comprenant les besoins métiers tout en gardant une vision concrète des systèmes et de leurs contraintes.\n\nJ’aime particulièrement analyser un problème, comprendre comment les différents composants d’un SI interagissent, puis construire des solutions simples et efficaces pour améliorer les processus.\n\nAujourd’hui, je souhaite continuer à évoluer sur des projets mêlant technologie, data, systèmes d’information et enjeux métiers, idéalement dans un environnement international.",
+  "ProfileTitle": "IT / Transformation Digitale / Finance / Données",
   "Data": "Data Management / Visualisation",
   "Data2": "SQL, NoSQL, Python, PowerBI, Tableau",
   "DataTitle": "Visualisation et gestion de données",
@@ -31,6 +32,13 @@
   "DataUseCase3Title": "Thémis Conseil (Mission pour BNP Paribas) :\nAnalyse budgétaire des projets IT au sein du département de la Compliance",
   "DataUseCase3Desc": "Conception de visualisations sur Tableau pour la production d'analyses financières destinées au management.",
   "DataStackTitle": "Outils & Technologies",
+  "CAC40Title": "CAC 40 - évolution sur un mois",
+  "CAC40Description": "Ce graphe utilise l'API Yahoo Finance pour récupérer l'indice du CAC 40 et son évolution sur le dernier mois.",
+  "CAC40XAxis": "Date (dd/mm)",
+  "CAC40YAxis": "Points de l'indice CAC 40",
+  "CAC40Dataset": "CAC 40",
+  "CAC40Tooltip": "CAC 40 (points)",
+  "CAC40Loading": "Chargement des données...",
   "Projet": "Gestion de projet",
   "Projet2": "Agile, V-Model, coordination, reporting",
   "PMTitle": "Gestion de projet",
@@ -51,5 +59,7 @@
   "AutoSkill2Desc": "Containerisation et orchestration.",
   "AutoSkill3Title": "VBA & Excel",
   "AutoSkill3Desc": "Macros avancées et automatisation Office.",
-  "BackHome": "Revenir à l'accueil"
+  "BackHome": "Revenir à l'accueil",
+  "FooterText": "Ce site a été entièrement codé en Python. Le code source est disponible au lien suivant :",
+  "FooterLink": "http://fakelien.com"
 }

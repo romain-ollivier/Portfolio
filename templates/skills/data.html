@@ -26,7 +26,7 @@ function loadTranslations(lang) {
 </script>
 
 <!-- Header -->
-<header class="flex justify-between items-center px-6 py-4 bg-white shadow-md">
+<header class="flex justify-between items-center px-6 py-4 bg-transparent shadow-none">
     <h1 class="text-2xl font-bold text-black">Romain Ollivier</h1>
     <div class="flex items-center space-x-2">
         <button class="p-2 rounded hover:bg-gray-200 transition" onclick="switchLang('fr')">FR
@@ -39,7 +39,7 @@ function loadTranslations(lang) {
 </header>
 
 <!-- PAGE CONTAINER -->
-<section class="bg-white px-6 py-16 flex flex-col items-center">
+<section class="bg-transparent px-6 py-16 flex flex-col items-center">
 
     <!-- TITLE -->
     <h2 data-i18n="DataTitle" class="text-4xl font-bold mb-6 text-center">
@@ -47,7 +47,7 @@ function loadTranslations(lang) {
     </h2>
 
     <!-- VISION -->
-    <div class="max-w-4xl bg-gray-100 p-6 rounded-lg mb-16">
+    <div class="max-w-4xl mb-16">
         <p data-i18n="DataVision" class="text-gray-800 text-lg text-center">
             Ayant suivi une spécialisation en intelligence des données, je conçois des solutions complètes de gestion et visualisation de données. De la collecte à l'analyse, en passant par l'automatisation des outils et la création de rapports interactifs pour accompagner la prise de décision.
         </p>
@@ -104,30 +104,43 @@ function loadTranslations(lang) {
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 
-            <div class="border border-black p-6 rounded-lg">
+            <div class="bg-black text-white p-6 rounded-lg shadow-md">
                 <h4 data-i18n="DataUseCase1Title" class="font-bold mb-2">Lendys (Projet interne) :Dashboard KPIs commerciaux</h4>
-                <p data-i18n="DataUseCase1Desc" class="text-sm text-gray-700">
+                <p data-i18n="DataUseCase1Desc" class="text-sm">
                     Développement d'un tableau de bord sous Power BI connecté via l'API Salesforce
                     pour le suivi des indicateurs clés de performance commerciaux.
                 </p>
             </div>
 
-            <div class="border border-black p-6 rounded-lg">
+            <div class="bg-yellow-600 text-white p-6 rounded-lg shadow-md">
                 <h4 data-i18n="DataUseCase2Title" class="font-bold mb-2">Acxias (Mission pour Pierre Fabre) : Automatisation de dataflow entre outil interne et logiciel d'achat</h4>
-                <p data-i18n="DataUseCase2Desc" class="text-sm text-gray-700">
+                <p data-i18n="DataUseCase2Desc" class="text-sm">
                     Script RPA python Selenium pour automatiser l'importation des tables de correspondances dans SAP Ariba
                 </p>
             </div>
 
-            <div class="border border-black p-6 rounded-lg">
+            <div class="bg-black text-white p-6 rounded-lg shadow-md">
                 <h4 data-i18n="DataUseCase3Title" class="font-bold mb-2"> Thémis Conseil (Mission pour BNP Paribas) : Analyse budgétaire des projets IT au sein du département de la Compliance</h4>
-                <p data-i18n="DataUseCase3Desc" class="text-sm text-gray-700">
+                <p data-i18n="DataUseCase3Desc" class="text-sm">
                    Conception de visualisations sur Tableau pour la production d’analyses financières destinées au management.
                 </p>
             </div>
 
         </div>
     </div>
+
+        <!-- CAC 40 CHART -->
+        <div class="max-w-5xl w-full mb-20">
+            <h3 data-i18n="CAC40Title" class="text-3xl font-bold mb-2 text-center">
+                CAC 40 - évolution sur un mois
+            </h3>
+            <p data-i18n="CAC40Description" class="max-w-3xl mx-auto text-center text-gray-700 mb-4">
+                Ce graphe utilise l'API Yahoo Finance pour récupérer l'indice du CAC 40 et son évolution sur le dernier mois.
+            </p>
+            <div class="relative h-80 w-full">
+                <canvas id="cac40-chart" aria-label="Graphique du CAC 40 sur un mois"></canvas>
+            </div>
+        </div>
 
     <!-- STACK -->
    <div class="max-w-4xl mx-auto text-center mb-16">
@@ -200,5 +213,74 @@ function loadTranslations(lang) {
     </a>
 
 </section>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+Promise.all([
+    fetch('/api/cac40'),
+    fetch(`/translations/${currentLang}.json`)
+]).then(async ([chartResponse, translationResponse]) => {
+        const data = await chartResponse.json();
+        const chartTexts = await translationResponse.json();
+        return { ok: chartResponse.ok, data, chartTexts };
+    })
+    .then(({ ok, data, chartTexts }) => {
+        if (!ok || data.error) {
+            console.error(data.error || 'Impossible de charger les données.');
+            return;
+        }
+
+        new Chart(document.getElementById('cac40-chart'), {
+            type: 'line',
+            data: {
+                labels: data.values.map(item => {
+                    const [year, month, day] = item.date.split('-');
+                    return `${day}/${month}`;
+                }),
+                datasets: [{
+                    label: chartTexts.CAC40Dataset,
+                    data: data.values.map(item => item.close),
+                    borderColor: '#111827',
+                    backgroundColor: 'rgba(234, 179, 8, 0.22)',
+                    fill: true,
+                    tension: 0.25,
+                    pointRadius: 3
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    x: {
+                        title: { display: true, text: chartTexts.CAC40XAxis }
+                    },
+                    y: {
+                        title: { display: true, text: chartTexts.CAC40YAxis },
+                        ticks: { callback: value => value.toLocaleString(currentLang === 'en' ? 'en-GB' : 'fr-FR') }
+                    }
+                },
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            label: context => `${chartTexts.CAC40Tooltip}: ${context.parsed.y.toLocaleString(currentLang === 'en' ? 'en-GB' : 'fr-FR')}`
+                        }
+                    }
+                }
+            }
+        });
+    })
+    .catch(() => {
+        console.error('Impossible de charger les données.');
+    });
+</script>
+
+<footer class="w-full px-6 pb-14 pt-8 text-center">
+    <p class="text-sm text-gray-700 opacity-90">
+        <span data-i18n="FooterText">Ce site a été entièrement codé en Python. Le code source est disponible au lien suivant :</span>
+        <a data-i18n="FooterLink" href="http://fakelien.com" target="_blank" rel="noopener noreferrer" class="text-gray-800 underline hover:text-gray-900">
+            http://fakelien.com
+        </a>
+    </p>
+</footer>
 
 {% endblock %}

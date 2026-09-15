@@ -25,7 +25,7 @@ function loadTranslations(lang) {
 }
 </script>
 
-<header class="flex justify-between items-center px-6 py-4 bg-white shadow-md">
+<header class="flex justify-between items-center px-6 py-4 bg-transparent shadow-none">
     <h1 class="text-2xl font-bold text-black">Romain Ollivier</h1>
     <div class="flex items-center space-x-2">
         <button class="p-2 rounded hover:bg-gray-200 transition" onclick="switchLang('fr')">FR
@@ -37,7 +37,7 @@ function loadTranslations(lang) {
     </div>
 </header>
 
-<section class="min-h-screen bg-white flex flex-col items-center justify-center text-center px-6">
+<section class="min-h-screen bg-transparent flex flex-col items-center justify-center text-center px-6">
     <h2 data-i18n="AutoTitle" class="text-3xl font-bold mb-4">Automation & Development</h2>
     <p data-i18n="AutoDesc" class="max-w-3xl text-gray-800 text-lg mb-8">
         Solutions d'automatisation et développement robustes.
@@ -56,9 +56,18 @@ function loadTranslations(lang) {
             <p data-i18n="AutoSkill3Desc" class="text-sm">Macros avancées et automatisation Office.</p>
         </div>
     </div>
+
+    <a href="/" data-i18n="BackHome" class="inline-block mt-8 text-blue-600 hover:underline">
+        Revenir à l'accueil
+    </a>
 </section>
 
-<div class="w-full text-center pb-10">
-    <a href="/" data-i18n="BackHome" class="text-blue-600 hover:underline">Revenir à l'accueil</a>
-</div>
+<footer class="w-full px-6 pb-14 pt-8 text-center">
+    <p class="text-sm text-gray-700 opacity-90">
+        <span data-i18n="FooterText">Ce site a été entièrement codé en Python. Le code source est disponible au lien suivant :</span>
+        <a data-i18n="FooterLink" href="http://fakelien.com" target="_blank" rel="noopener noreferrer" class="text-gray-800 underline hover:text-gray-900">
+            http://fakelien.com
+        </a>
+    </p>
+</footer>
 {% endblock %}
