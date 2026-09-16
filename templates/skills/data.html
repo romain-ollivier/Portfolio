@@ -57,21 +57,21 @@ function loadTranslations(lang) {
     <div class="max-w-5xl grid grid-cols-1 md:grid-cols-3 gap-8 mb-20 w-full">
 
         <!-- Data Collection -->
-        <div class="bg-yellow-600 text-white p-6 rounded-lg shadow-md">
+        <div class="bg-yellow-600 text-white p-6 rounded-lg shadow-md h-full flex flex-col justify-evenly">
             <h3 data-i18n="DataBlock1Title" class="font-bold text-xl mb-4">
                 Collecte, gestion et intégration des données
             </h3>
             <ul class="list-disc list-inside text-sm space-y-1">
                 <li data-i18n="DataBlock1Item1">Compréhension des systèmes de stockage et de manipulation des données</li>
-                <li data-i18n="DataBlock1Item2">Solides compétences de développement en python 
-                    (Ce site a été entièrement développé en Python avec le framework Flask)
+                <li data-i18n="DataBlock1Item2">Solides compétences de développement en Python
+                    (Ce site utilise Python et le framework Flask)
                 </li>
                 <li data-i18n="DataBlock1Item3">Automatisation des flux via script et exécuteur de tâches</li>
             </ul>
         </div>
 
         <!-- Data Analysis -->
-        <div class="bg-black text-white p-6 rounded-lg shadow-md">
+        <div class="bg-black text-white p-6 rounded-lg shadow-md h-full flex flex-col justify-evenly">
             <h3 data-i18n="DataBlock2Title" class="font-bold text-xl mb-4">
                 Analyse & transformation des données
             </h3>
@@ -83,7 +83,7 @@ function loadTranslations(lang) {
         </div>
 
         <!-- Data Visualization -->
-        <div class="bg-yellow-600 text-white p-6 rounded-lg shadow-md">
+        <div class="bg-yellow-600 text-white p-6 rounded-lg shadow-md h-full flex flex-col justify-evenly">
             <h3 data-i18n="DataBlock3Title" class="font-bold text-xl mb-4">
                 Visualisation & reporting
             </h3>
@@ -113,7 +113,7 @@ function loadTranslations(lang) {
             </div>
 
             <div class="bg-yellow-600 text-white p-6 rounded-lg shadow-md">
-                <h4 data-i18n="DataUseCase2Title" class="font-bold mb-2">Acxias (Mission pour Pierre Fabre) : Automatisation de dataflow entre outil interne et logiciel d'achat</h4>
+                <h4 data-i18n="DataUseCase2Title" class="font-bold mb-2">Lendys (Mission pour Thales) : Automatisation de dataflow entre outil interne et logiciel d'achat</h4>
                 <p data-i18n="DataUseCase2Desc" class="text-sm">
                     Script RPA python Selenium pour automatiser l'importation des tables de correspondances dans SAP Ariba
                 </p>
@@ -143,65 +143,65 @@ function loadTranslations(lang) {
         </div>
 
     <!-- STACK -->
-   <div class="max-w-4xl mx-auto text-center mb-16">
+    <div class="max-w-4xl w-full mx-auto text-center mb-16">
     <h3 data-i18n="DataStackTitle" class="text-2xl font-bold mb-6">
         Outils & Technologies
     </h3>
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 text-left">
+    <div class="grid grid-cols-1 lg:grid-cols-4 gap-6 text-left">
         <!-- Excel 5/5 -->
-        <div>
+        <div class="min-w-0">
             <span class="font-semibold">Excel</span>
             <div class="w-full bg-gray-200 rounded-full h-4 mt-1">
                 <div class="bg-green-500 h-4 rounded-full" style="width: 100%;"></div>
             </div>
         </div>
         <!-- Python 4,5/5 -->
-        <div>
+        <div class="min-w-0">
             <span class="font-semibold">Python</span>
             <div class="w-full bg-gray-200 rounded-full h-4 mt-1">
                 <div class="bg-green-500 h-4 rounded-full" style="width: 90%;"></div>
             </div>
         </div>
-        <!-- Power BI 4,5/5 -->
-        <div>
-            <span class="font-semibold">Power BI</span>
+        <!-- SQL 4,5/5 -->
+        <div class="min-w-0">
+            <span class="font-semibold">SQL</span>
             <div class="w-full bg-gray-200 rounded-full h-4 mt-1">
                 <div class="bg-green-500 h-4 rounded-full" style="width: 90%;"></div>
             </div>
         </div>
+        <!-- Power BI 4/5 -->
+        <div class="min-w-0">
+            <span class="font-semibold">Power BI</span>
+            <div class="w-full bg-gray-200 rounded-full h-4 mt-1">
+                <div class="bg-green-500 h-4 rounded-full" style="width: 80%;"></div>
+            </div>
+        </div>
         <!-- VBA 4/5 -->
-        <div>
+        <div class="min-w-0">
             <span class="font-semibold">VBA</span>
             <div class="w-full bg-gray-200 rounded-full h-4 mt-1">
                 <div class="bg-green-500 h-4 rounded-full" style="width: 80%;"></div>
             </div>
         </div>
-        <!-- APIs 4/5 -->
-        <div>
-            <span class="font-semibold">APIs</span>
-            <div class="w-full bg-gray-200 rounded-full h-4 mt-1">
-                <div class="bg-green-500 h-4 rounded-full" style="width: 80%;"></div>
-            </div>
-        </div>
-        <!-- SQL 4/5 -->
-        <div>
-            <span class="font-semibold">SQL</span>
-            <div class="w-full bg-gray-200 rounded-full h-4 mt-1">
-                <div class="bg-green-500 h-4 rounded-full" style="width: 80%;"></div>
-            </div>
-        </div>
         <!-- Alteryx 3,5/5 -->
-        <div>
+        <div class="min-w-0">
             <span class="font-semibold">Alteryx</span>
             <div class="w-full bg-gray-200 rounded-full h-4 mt-1">
                 <div class="bg-green-500 h-4 rounded-full" style="width: 70%;"></div>
             </div>
         </div>
         <!-- Tableau 3,5/5 -->
-        <div>
+        <div class="min-w-0">
             <span class="font-semibold">Tableau</span>
             <div class="w-full bg-gray-200 rounded-full h-4 mt-1">
                 <div class="bg-green-500 h-4 rounded-full" style="width: 70%;"></div>
+            </div>
+        </div>
+        <!-- Statistiques / ML 3/5 -->
+        <div class="min-w-0">
+            <span class="font-semibold">Statistiques / ML</span>
+            <div class="w-full bg-gray-200 rounded-full h-4 mt-1">
+                <div class="bg-green-500 h-4 rounded-full" style="width: 60%;"></div>
             </div>
         </div>
     </div>
@@ -276,9 +276,9 @@ Promise.all([
 
 <footer class="w-full px-6 pb-14 pt-8 text-center">
     <p class="text-sm text-gray-700 opacity-90">
-        <span data-i18n="FooterText">Ce site a été entièrement codé en Python. Le code source est disponible au lien suivant :</span>
-        <a data-i18n="FooterLink" href="http://fakelien.com" target="_blank" rel="noopener noreferrer" class="text-gray-800 underline hover:text-gray-900">
-            http://fakelien.com
+        <span data-i18n="FooterText">Ce site utilise Python avec le framework Flask ainsi que JavaScript. Son code source est disponible au lien suivant :</span>
+        <a data-i18n="FooterLink" href="https://github.com/romain-ollivier/Portfolio" target="_blank" rel="noopener noreferrer" class="text-gray-800 underline hover:text-gray-900">
+            https://github.com/romain-ollivier/Portfolio
         </a>
     </p>
 </footer>

@@ -38,22 +38,83 @@ function loadTranslations(lang) {
 </header>
 
 <section class="min-h-screen bg-transparent flex flex-col items-center justify-center text-center px-6">
-    <h2 data-i18n="PMTitle" class="text-3xl font-bold mb-4">Project Management</h2>
-    <p data-i18n="PMDesc" class="max-w-3xl text-gray-800 text-lg mb-8">
-        Gestion de projets complexes avec des méthodologies éprouvées.
+    <h2 data-i18n="PMTitle" class="text-[2rem] font-bold mb-8">Gestion de projets et cycle de vie du développement logiciel</h2>
+    <p data-i18n="PMDesc" class="max-w-3xl text-left text-gray-800 text-lg leading-relaxed whitespace-pre-line mb-14">
+        Au cours de mes différentes expériences, j’ai participé à plusieurs étapes du cycle de vie de projets informatiques, de l’analyse du besoin jusqu’au déploiement et au suivi des solutions.
+        J’ai notamment travaillé sur le recueil des besoins métiers, la rédaction de spécifications, la conception de solutions, la coordination entre les différents interlocuteurs, ainsi que les phases de tests, de recette et d’accompagnement des utilisateurs.
+
+        Mon expérience en production bancaire m’a également permis de développer une bonne compréhension des enjeux liés à la mise en production et à la maintenance des systèmes : analyse d’incidents, troubleshooting, identification des causes racines, suivi des actions correctives et coordination avec les équipes techniques.
     </p>
-    <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-4xl w-full">
-        <div class="bg-black text-white p-6 rounded-lg shadow-md text-center">
-            <h3 data-i18n="PMSkill1Title" class="font-bold text-lg mb-2">Agile</h3>
-            <p data-i18n="PMSkill1Desc" class="text-sm">Scrum, itérations, collaboration.</p>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-5xl w-full">
+        <div class="bg-yellow-600 text-white p-6 rounded-lg shadow-md text-center h-full flex flex-col justify-evenly">
+            <h3 data-i18n="PMSkill1Title" class="font-bold text-lg mb-2">Analyse des besoins & compréhension des enjeux métiers</h3>
+            <p data-i18n="PMSkill1Desc" class="text-sm leading-relaxed whitespace-pre-line">Comprendre les besoins des utilisateurs et les enjeux métiers afin de les traduire en exigences fonctionnelles et techniques.
+                Faire le lien entre les équipes métiers et IT pour concevoir des solutions adaptées aux problématiques de l’entreprise.</p>
         </div>
-        <div class="bg-black text-white p-6 rounded-lg shadow-md text-center">
-            <h3 data-i18n="PMSkill2Title" class="font-bold text-lg mb-2">V-Model</h3>
-            <p data-i18n="PMSkill2Desc" class="text-sm">Gestion en cascade structurée.</p>
+        <div class="bg-black text-white p-6 rounded-lg shadow-md text-center h-full flex flex-col justify-evenly">
+            <h3 data-i18n="PMSkill2Title" class="font-bold text-lg mb-2">Tests, roadmap & mise en production</h3>
+            <p data-i18n="PMSkill2Desc" class="text-sm leading-relaxed whitespace-pre-line">Planifier les développements, les tests et la mise en production.
+                Suivre les priorités, les dépendances et les validations afin d’assurer un déploiement maîtrisé.</p>
         </div>
-        <div class="bg-black text-white p-6 rounded-lg shadow-md text-center">
-            <h3 data-i18n="PMSkill3Title" class="font-bold text-lg mb-2">Coordination & Reporting</h3>
-            <p data-i18n="PMSkill3Desc" class="text-sm">KPI, suivi, pilotage d’équipe.</p>
+        <div class="bg-yellow-600 text-white p-6 rounded-lg shadow-md text-center h-full flex flex-col justify-evenly">
+            <h3 data-i18n="PMSkill3Title" class="font-bold text-lg mb-2">Support & Aftercare</h3>
+            <p data-i18n="PMSkill3Desc" class="text-sm leading-relaxed whitespace-pre-line">Assurer le suivi des solutions après leur mise en production, analyser les incidents et contribuer à leur résolution.
+                Identifier les causes racines et accompagner l’amélioration continue des systèmes.</p>
+        </div>
+    </div>
+
+    <div class="max-w-5xl w-full mt-16 mb-20">
+        <h3 data-i18n="PMProjectsTitle" class="text-[2rem] font-bold mb-12 text-center">
+            Quelques projets réalisés
+        </h3>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-black text-white p-6 rounded-lg shadow-md h-full flex flex-col justify-evenly">
+                <h4 data-i18n="PMProject1Title" class="font-bold mb-2 whitespace-pre-line">Lendys (Mission pour Thales)</h4>
+                <p data-i18n="PMProject1Desc" class="text-sm whitespace-pre-line">Implémentation de la solution SAP Ariba, avec une intervention du pré-go-live à l’aftercare : configuration, documentation, support, accompagnement des utilisateurs et amélioration continue.</p>
+            </div>
+
+            <div class="bg-yellow-600 text-white p-6 rounded-lg shadow-md h-full flex flex-col justify-evenly">
+                <h4 data-i18n="PMProject2Title" class="font-bold mb-2 whitespace-pre-line">Crédit agricole CIB</h4>
+                <p data-i18n="PMProject2Desc" class="text-sm whitespace-pre-line">Participation aux déploiements et mises en production, planification des roadmaps et gestion des rollbacks, avec une attention constante portée à la continuité des opérations critiques.</p>
+            </div>
+
+            <div class="bg-black text-white p-6 rounded-lg shadow-md h-full flex flex-col justify-evenly">
+                <h4 data-i18n="PMProject3Title" class="font-bold mb-2 whitespace-pre-line">Albioma</h4>
+                <p data-i18n="PMProject3Desc" class="text-sm whitespace-pre-line">Projet de mise en place d’un SI pour le suivi des performances d’une centrale thermique : compréhension des enjeux métiers, rédaction des spécifications fonctionnelles et développement de la solution avec Microsoft Office, VB, VBA et SQL.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="max-w-5xl w-full mt-0 mb-12">
+        <h3 data-i18n="PMMethodologiesTitle" class="text-[2rem] font-bold mb-8 text-center">
+            Méthodologies
+        </h3>
+        <div class="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-5">
+            <div class="bg-white/30 backdrop-blur-sm border border-white/40 rounded-lg p-3 shadow-md flex items-center justify-center gap-1 text-center text-base">
+                <span data-i18n="PMMethodology1" class="font-semibold">Agile</span>
+                <span class="text-green-600 text-2xl font-bold" aria-hidden="true">✓</span>
+            </div>
+            <div class="bg-white/30 backdrop-blur-sm border border-white/40 rounded-lg p-3 shadow-md flex items-center justify-center gap-1 text-center text-base">
+                <span data-i18n="PMMethodology2" class="font-semibold">Curiosité et compréhension des enjeux métiers</span>
+                <span class="text-green-600 text-2xl font-bold" aria-hidden="true">✓</span>
+            </div>
+            <div class="bg-white/30 backdrop-blur-sm border border-white/40 rounded-lg p-3 shadow-md flex items-center justify-center gap-1 text-center text-base">
+                <span data-i18n="PMMethodology3" class="font-semibold">Rédaction des spécifications techniques et d’un cahier des charges</span>
+                <span class="text-green-600 text-2xl font-bold" aria-hidden="true">✓</span>
+            </div>
+            <div class="bg-white/30 backdrop-blur-sm border border-white/40 rounded-lg p-3 shadow-md flex items-center justify-center gap-1 text-center text-base">
+                <span data-i18n="PMMethodology4" class="font-semibold">Cycle de vie des développements</span>
+                <span class="text-green-600 text-2xl font-bold" aria-hidden="true">✓</span>
+            </div>
+            <div class="bg-white/30 backdrop-blur-sm border border-white/40 rounded-lg p-3 shadow-md flex items-center justify-center gap-1 text-center text-base">
+                <span data-i18n="PMMethodology5" class="font-semibold">Support et gestion de production</span>
+                <span class="text-green-600 text-2xl font-bold" aria-hidden="true">✓</span>
+            </div>
+            <div class="bg-white/30 backdrop-blur-sm border border-white/40 rounded-lg p-3 shadow-md flex items-center justify-center gap-1 text-center text-base">
+                <span data-i18n="PMMethodology6" class="font-semibold">Documentation propre et compréhensible</span>
+                <span class="text-green-600 text-2xl font-bold" aria-hidden="true">✓</span>
+            </div>
         </div>
     </div>
 
@@ -64,9 +125,9 @@ function loadTranslations(lang) {
 
 <footer class="w-full px-6 pb-14 pt-8 text-center">
     <p class="text-sm text-gray-700 opacity-90">
-        <span data-i18n="FooterText">Ce site a été entièrement codé en Python. Le code source est disponible au lien suivant :</span>
-        <a data-i18n="FooterLink" href="http://fakelien.com" target="_blank" rel="noopener noreferrer" class="text-gray-800 underline hover:text-gray-900">
-            http://fakelien.com
+        <span data-i18n="FooterText">Ce site utilise Python avec le framework Flask ainsi que JavaScript. Son code source est disponible au lien suivant :</span>
+        <a data-i18n="FooterLink" href="https://github.com/romain-ollivier/Portfolio" target="_blank" rel="noopener noreferrer" class="text-gray-800 underline hover:text-gray-900">
+            https://github.com/romain-ollivier/Portfolio
         </a>
     </p>
 </footer>

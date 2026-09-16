@@ -38,22 +38,107 @@ function loadTranslations(lang) {
 </header>
 
 <section class="min-h-screen bg-transparent flex flex-col items-center justify-center text-center px-6">
-    <h2 data-i18n="AutoTitle" class="text-3xl font-bold mb-4">Automation & Development</h2>
-    <p data-i18n="AutoDesc" class="max-w-3xl text-gray-800 text-lg mb-8">
-        Solutions d'automatisation et développement robustes.
+    <h2 data-i18n="AutoTitle" class="text-3xl font-bold mb-12">IA &amp; Architecture des systèmes d'informations</h2>
+    <p data-i18n="AutoDesc" class="max-w-3xl text-left text-gray-800 text-lg leading-relaxed whitespace-pre-line mb-[4.25rem]">
+        Passionné par les nouvelles technologies, je m’intéresse particulièrement à l’IA générative et aux outils qui transforment aujourd’hui notre manière de concevoir et développer des solutions.
+        Je suis convaincu que leur maîtrise permet d’accélérer considérablement notre capacité à analyser, développer, automatiser et résoudre des problématiques complexes, tout en augmentant notre valeur ajoutée en tant qu’ingénieur du numérique.
+
+        Je possède également une bonne compréhension des architectures de systèmes d’information et des interactions entre leurs différentes composantes, des applications et bases de données aux APIs, réseaux, systèmes d’exploitation et infrastructures Cloud.
     </p>
-    <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-4xl w-full">
-        <div class="bg-yellow-700 text-white p-6 rounded-lg shadow-md text-center">
-            <h3 data-i18n="AutoSkill1Title" class="font-bold text-lg mb-2">Python & RPA</h3>
-            <p data-i18n="AutoSkill1Desc" class="text-sm">Automatisation de processus métier.</p>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-5xl w-full">
+        <div class="bg-yellow-600 text-white p-6 rounded-lg shadow-md text-center h-full flex flex-col justify-evenly">
+            <h3 data-i18n="AutoSkill1Title" class="font-bold text-lg mb-2">IA générative & outils</h3>
+            <p data-i18n="AutoSkill1Desc" class="text-sm whitespace-pre-line">Maîtrise de l’IA générative, des outils d’assistance au développement et des agents IA pour accélérer la conception de solutions et automatiser des processus et tâches complexes.</p>
         </div>
-        <div class="bg-yellow-700 text-white p-6 rounded-lg shadow-md text-center">
-            <h3 data-i18n="AutoSkill2Title" class="font-bold text-lg mb-2">Docker & Kubernetes</h3>
-            <p data-i18n="AutoSkill2Desc" class="text-sm">Containerisation et orchestration.</p>
+        <div class="bg-black text-white p-6 rounded-lg shadow-md text-center h-full flex flex-col justify-evenly">
+            <h3 data-i18n="AutoSkill2Title" class="font-bold text-lg mb-2">Architecture des systèmes d’information</h3>
+            <p data-i18n="AutoSkill2Desc" class="text-sm whitespace-pre-line">Compréhension des différentes architectures SI et des interactions entre applications, bases de données et services, avec une attention particulière portée aux échanges de données.</p>
         </div>
-        <div class="bg-yellow-700 text-white p-6 rounded-lg shadow-md text-center">
-            <h3 data-i18n="AutoSkill3Title" class="font-bold text-lg mb-2">VBA & Excel</h3>
-            <p data-i18n="AutoSkill3Desc" class="text-sm">Macros avancées et automatisation Office.</p>
+        <div class="bg-yellow-600 text-white p-6 rounded-lg shadow-md text-center h-full flex flex-col justify-evenly">
+            <h3 data-i18n="AutoSkill3Title" class="font-bold text-lg mb-2">Cloud & infrastructures</h3>
+            <p data-i18n="AutoSkill3Desc" class="text-sm whitespace-pre-line">Compréhension des environnements Cloud et des infrastructures modernes, de l’administration des systèmes à la conteneurisation et à l’orchestration des applications.</p>
+        </div>
+    </div>
+
+    <div class="max-w-5xl w-full mt-16 mb-20">
+        <h3 data-i18n="AutoProjectsTitle" class="text-[2rem] font-bold mb-12 text-center">
+            Quelques projets réalisés
+        </h3>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-black text-white p-6 rounded-lg shadow-md h-full flex flex-col justify-evenly">
+                <h4 data-i18n="AutoProject1Title" class="font-bold mb-2 whitespace-pre-line">Lendys (Projet interne)</h4>
+                <p data-i18n="AutoProject1Desc" class="text-sm whitespace-pre-line">Création d’un agent IA utilisant l’API GPT pour automatiser l’analyse des écarts lors d’un rapprochement bancaire.
+                    À partir des lignes comptables présentant des différences, l’agent analyse les données et génère une hypothèse expliquant l’origine de chaque écart.</p>
+            </div>
+
+            <div class="bg-yellow-600 text-white p-6 rounded-lg shadow-md h-full flex flex-col justify-evenly">
+                <h4 data-i18n="AutoProject2Title" class="font-bold mb-2 whitespace-pre-line">Crédit agricole CIB</h4>
+                <p data-i18n="AutoProject2Desc" class="text-sm whitespace-pre-line">Intervention sur une chaîne applicative bancaire complexe.
+                    Compréhension des échanges et des dépendances entre applications.
+                    Maîtrise des infrastructures permettant d’assurer un support de niveau 2-3.</p>
+            </div>
+
+            <div class="bg-black text-white p-6 rounded-lg shadow-md h-full flex flex-col justify-evenly">
+                <h4 data-i18n="AutoProject3Title" class="font-bold mb-2 whitespace-pre-line">Crédit agricole CIB</h4>
+                <p data-i18n="AutoProject3Desc" class="text-sm whitespace-pre-line">Projet DevOps : automatisation des procédures de démarrage et d’arrêt via Ansible, et coordination avec les équipes métiers et de développement pour finaliser les pipelines de déploiement en production.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="max-w-4xl w-full mx-auto text-center mb-16">
+        <h3 data-i18n="AutoStackTitle" class="text-2xl font-bold mb-6">
+            Outils & Technologies
+        </h3>
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-6 text-left">
+            <div class="min-w-0">
+                <span data-i18n="AutoTool1" class="font-semibold">APIs</span>
+                <div class="w-full bg-gray-200 rounded-full h-4 mt-1">
+                    <div class="bg-green-500 h-4 rounded-full" style="width: 95%;"></div>
+                </div>
+            </div>
+            <div class="min-w-0">
+                <span data-i18n="AutoTool2" class="font-semibold">GitHub Copilot</span>
+                <div class="w-full bg-gray-200 rounded-full h-4 mt-1">
+                    <div class="bg-green-500 h-4 rounded-full" style="width: 90%;"></div>
+                </div>
+            </div>
+            <div class="min-w-0">
+                <span data-i18n="AutoTool3" class="font-semibold">GenAI (GPT/Claude Code)</span>
+                <div class="w-full bg-gray-200 rounded-full h-4 mt-1">
+                    <div class="bg-green-500 h-4 rounded-full" style="width: 85%;"></div>
+                </div>
+            </div>
+            <div class="min-w-0">
+                <span data-i18n="AutoTool4" class="font-semibold">Git</span>
+                <div class="w-full bg-gray-200 rounded-full h-4 mt-1">
+                    <div class="bg-green-500 h-4 rounded-full" style="width: 80%;"></div>
+                </div>
+            </div>
+            <div class="min-w-0">
+                <span data-i18n="AutoTool5" class="font-semibold">Database</span>
+                <div class="w-full bg-gray-200 rounded-full h-4 mt-1">
+                    <div class="bg-green-500 h-4 rounded-full" style="width: 80%;"></div>
+                </div>
+            </div>
+            <div class="min-w-0">
+                <span data-i18n="AutoTool6" class="font-semibold">OS / PowerShell - Linux</span>
+                <div class="w-full bg-gray-200 rounded-full h-4 mt-1">
+                    <div class="bg-green-500 h-4 rounded-full" style="width: 80%;"></div>
+                </div>
+            </div>
+            <div class="min-w-0">
+                <span data-i18n="AutoTool7" class="font-semibold">Docker / Kubernetes</span>
+                <div class="w-full bg-gray-200 rounded-full h-4 mt-1">
+                    <div class="bg-green-500 h-4 rounded-full" style="width: 65%;"></div>
+                </div>
+            </div>
+            <div class="min-w-0">
+                <span data-i18n="AutoTool8" class="font-semibold">Cloud</span>
+                <div class="w-full bg-gray-200 rounded-full h-4 mt-1">
+                    <div class="bg-green-500 h-4 rounded-full" style="width: 65%;"></div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -64,9 +149,9 @@ function loadTranslations(lang) {
 
 <footer class="w-full px-6 pb-14 pt-8 text-center">
     <p class="text-sm text-gray-700 opacity-90">
-        <span data-i18n="FooterText">Ce site a été entièrement codé en Python. Le code source est disponible au lien suivant :</span>
-        <a data-i18n="FooterLink" href="http://fakelien.com" target="_blank" rel="noopener noreferrer" class="text-gray-800 underline hover:text-gray-900">
-            http://fakelien.com
+        <span data-i18n="FooterText">Ce site utilise Python avec le framework Flask ainsi que JavaScript. Son code source est disponible au lien suivant :</span>
+        <a data-i18n="FooterLink" href="https://github.com/romain-ollivier/Portfolio" target="_blank" rel="noopener noreferrer" class="text-gray-800 underline hover:text-gray-900">
+            https://github.com/romain-ollivier/Portfolio
         </a>
     </p>
 </footer>
